@@ -17,7 +17,7 @@
 
 
     
-    <a href="#openModal">New Contact</a>
+    <a href="#kontaktModal">New Contact</a>
       <br>
       <br>
       <!-- Contact list starts here -->
@@ -35,7 +35,7 @@
               <div id="canvas">
                   <tr >
                     <td><button onclick="del(this)">Delete</button></td>
-                    <td>Alastair Reynolds</td>
+                    <td href="#viewModal">Alastair Reynolds</td>
                     <td>0707396653</td>
                     <td>a.reyn@nomail.nil</td>
                   </tr>
@@ -88,7 +88,7 @@
 
 
                 <!-- New contact modal -->
-                  <div id="openModal" class="modalDialog">
+                  <div id="kontaktModal" class="modalDialog">
                     <div>
                       <a href="#close" title="Close" id="close" class="close">X</a>
                       <h2>Add Contact</h2>
@@ -112,41 +112,30 @@
 
                   <!-- View contact Modal -->
 
-                  <div id="openModal" class="modalDialog">
-                      <div>
-                        <a href="#close" title="Close" id="close" class="close">X</a>
-                        <h2>Add Contact</h2>
-                        <form id="newcon">
-                          Name:
-                          <input id="namefield" placeholder="Name"><br>
-                          <p></p>
-                          Number:
-                          <input id="numfield" placeholder="Number" type="tel">
-                          <p></p>
-                          Email:
-                          <input id="emailfield" placeholder="email" type="email">
-                            <p></p>
-                          <input id="saveBtn" type="submit" value="Save">
-                          <input type="reset" href="#close" value="Clear">
-                        </form>
-                        <p></p>
-                      </div>
+                  <!-- <a href="#viewModal">Open Modal</a> -->
+
+                  <div id="viewModal" class="modalDialog">
+                    <div>
+                      <a href="#close" title="Close" class="close">X</a>
+                      <h2>Contact Details</h2>
+                      Name:
+                      
+                      <div id="nameDisplay"></div>
+                      <p></p>
+                      Number:
+                      
+                      <div id="numDisplay"></div>
+                      <p></p>
+                      Email:
+                      <div id="mailDisplay"></div>
                     </div>
+                  </div>
 
 
     
     <!-- <script src="helper.js"></script> -->
     <script src="js/builder.js"></script>
 
-    <!-- Make table rows clickable -->
-    <!-- <script>
-        jQuery(document).ready(function($) {
-          $(".clickable").click(function() {
-            window.location = $(this).data("href");
-          });
-          
-        });
-        </script> -->
 
     
   </body>

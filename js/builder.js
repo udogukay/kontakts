@@ -75,9 +75,9 @@ document.getElementById('close').click();
 }); 
 
 
-function editTrigger(x) {
+function viewTrigger(x) {
   
-    
+    this.querySelector()
     // modal trigger
 
 

@@ -70,9 +70,8 @@ function sortTable() {
 
 
 
-document.getElementById('contactsTable').appendChild()
 // Clear modal contents when save is clicked
-// document.getElementById("newcon").reset()
+document.getElementById("newcon").reset()
 
 sortTable();
 }); 
@@ -108,7 +107,7 @@ $('#my_modal').on('show.bs.modal', function(e) {
 
 
 [1].cells[1].innerText
-$("tr")[1].cells[1].innerText
+document.getElementsByTagName("tr")[1].cells[1].innerText
 
 {/* modal reset */}
 document.getElementById("newcon").reset()
