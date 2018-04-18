@@ -1,3 +1,5 @@
+
+// Still havent worked out how to unbreak this
 // function sortTable() {
 //     var table, rows, switching, i, x, y, shouldSwitch;
 //     table = document.getElementById("contactsTable");
@@ -37,15 +39,18 @@
 
 
 
-
-
+// Row deletion function
+function del(x){
+    var p=x.parentNode.parentNode;
+         p.parentNode.removeChild(p);
+}
 
 
 
 
 
 var saveButton = document.getElementById('saveBtn').addEventListener('click',function() {
-    var HTMLkontakt = '<tr><td>%name%</td><td>%number%</td><td>%email%</td></tr>';
+    var HTMLkontakt = '<tr><td><button onclick="del(this)">Delete</button></td><td>%name%</td><td>%number%</td><td>%email%</td></tr>';
     
     // Table and metadata insertion
     var namefield = document.getElementById('namefield').value;

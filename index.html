@@ -25,7 +25,7 @@
           <table class="table table-dark" id="contactsTable">
             <thead>
               <tr>
-                
+                <th></th>
                 <th>Name</th>
                 <th>Number</th>
                 <th>Email</th>
@@ -34,13 +34,14 @@
             <tbody>
               <div id="canvas">
                   <tr >
+                    <td><button onclick="del(this)">Delete</button></td>
                     <td>Alastair Reynolds</td>
                     <td>0707396653</td>
                     <td>a.reyn@nomail.nil</td>
                   </tr>
                 
                   <tr>
-                    
+                      <td><button onclick="del(this)">Delete</button></td>
                     <td>Ben Bova</td>
                     <td>0808268466</td>
                     <td>bbova@nomail.nil</td>
@@ -48,7 +49,7 @@
 
 
                 <tr>
-               
+                    <td><button onclick="del(this)">Delete</button></td>
                 <td>Galahadius</td>
                   <td>08011235813</td>
                   <td>sirgalahad@nomail.nil</td>
@@ -56,21 +57,21 @@
                 </tr>
 
                 <tr>
-
+                    <td><button onclick="del(this)">Delete</button></td>
                     <td>Kaptain Afrika</td>
                     <td>080267552527</td>
                     <td>kafrika@nomail.nil</td>
                   </tr>
 
                 <tr>
-
+                    <td><button onclick="del(this)">Delete</button></td>
                     <td>Maximus</td>
                     <td>0806542314</td>
                     <td>maxie@nomail.nil</td>
                   </tr>
 
                   <tr>
-
+                      <td><button onclick="del(this)">Delete</button></td>
                     <td>Tunde Smatt</td>
                     <td>080886337628</td>
                     <td>tsmatt@nomail.nil</td>
@@ -86,40 +87,66 @@
     
 
 
+                <!-- New contact modal -->
+                  <div id="openModal" class="modalDialog">
+                    <div>
+                      <a href="#close" title="Close" id="close" class="close">X</a>
+                      <h2>Add Contact</h2>
+                      <form id="newcon">
+                        Name:
+                        <input id="namefield" placeholder="Name"><br>
+                        <p></p>
+                        Number:
+                        <input id="numfield" placeholder="Number" type="tel">
+                        <p></p>
+                        Email:
+                        <input id="emailfield" placeholder="email" type="email">
+                          <p></p>
+                        <input id="saveBtn" type="submit" value="Save">
+                        <input type="reset" href="#close" value="Clear">
+                      </form>
+                      <p></p>
+                    </div>
+                  </div>
+               
 
-<div id="openModal" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" id="close" class="close">X</a>
-		<h2>Add Contact</h2>
-		<form id="newcon">
-      Name:
-      <input id="namefield" placeholder="Name"><br>
-      <p></p>
-      Number:
-      <input id="numfield" placeholder="Number" type="tel">
-      <p></p>
-      Email:
-      <input id="emailfield" placeholder="email" type="email">
-        <p></p>
-      <input id="saveBtn" type="submit" value="Save">
-      <input type="reset" href="#close" value="Clear">
-      <button onclick="wipe()">wipe</button> 
-    </form>
-		<p></p>
-	</div>
-</div>
-<script>
-  function wipe(){
-  document.getElementById("newcon").reset()
-  }
-</script>
+                  <!-- View contact Modal -->
 
-
+                  <div id="openModal" class="modalDialog">
+                      <div>
+                        <a href="#close" title="Close" id="close" class="close">X</a>
+                        <h2>Add Contact</h2>
+                        <form id="newcon">
+                          Name:
+                          <input id="namefield" placeholder="Name"><br>
+                          <p></p>
+                          Number:
+                          <input id="numfield" placeholder="Number" type="tel">
+                          <p></p>
+                          Email:
+                          <input id="emailfield" placeholder="email" type="email">
+                            <p></p>
+                          <input id="saveBtn" type="submit" value="Save">
+                          <input type="reset" href="#close" value="Clear">
+                        </form>
+                        <p></p>
+                      </div>
+                    </div>
 
 
     
     <!-- <script src="helper.js"></script> -->
-    <script src="builder.js"></script>
+    <script src="js/builder.js"></script>
+
+    <!-- Make table rows clickable -->
+    <!-- <script>
+        jQuery(document).ready(function($) {
+          $(".clickable").click(function() {
+            window.location = $(this).data("href");
+          });
+          
+        });
+        </script> -->
 
     
   </body>
