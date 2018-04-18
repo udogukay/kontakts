@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Address Book</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    
+    <h1>Lab: Phonebook</h1>
+
+
+    
+    <a href="#openModal">New Contact</a>
+      <br>
+      <br>
+      <!-- Contact list starts here -->
+        
+          <table class="table table-dark" id="contactsTable">
+            <thead>
+              <tr>
+                
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <div id="canvas">
+                  <tr >
+                    <td>Alastair Reynolds</td>
+                    <td>0707396653</td>
+                    <td>a.reyn@nomail.nil</td>
+                  </tr>
+                
+                  <tr>
+                    
+                    <td>Ben Bova</td>
+                    <td>0808268466</td>
+                    <td>bbova@nomail.nil</td>
+                  </tr>
+
+
+                <tr>
+               
+                <td>Galahadius</td>
+                  <td>08011235813</td>
+                  <td>sirgalahad@nomail.nil</td>
+                
+                </tr>
+
+                <tr>
+
+                    <td>Kaptain Afrika</td>
+                    <td>080267552527</td>
+                    <td>kafrika@nomail.nil</td>
+                  </tr>
+
+                <tr>
+
+                    <td>Maximus</td>
+                    <td>0806542314</td>
+                    <td>maxie@nomail.nil</td>
+                  </tr>
+
+                  <tr>
+
+                    <td>Tunde Smatt</td>
+                    <td>080886337628</td>
+                    <td>tsmatt@nomail.nil</td>
+                  </tr>
+              </div>
+            </tbody>
+
+          </table>
+        </div>
+    
+    
+
+    
+
+
+
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" id="close" class="close">X</a>
+		<h2>Add Contact</h2>
+		<form id="newcon">
+      Name:
+      <input id="namefield" placeholder="Name"><br>
+      <p></p>
+      Number:
+      <input id="numfield" placeholder="Number" type="tel">
+      <p></p>
+      Email:
+      <input id="emailfield" placeholder="email" type="email">
+        <p></p>
+      <input id="saveBtn" type="submit" value="Save">
+      <input type="reset" href="#close" value="Clear">
+      <button onclick="wipe()">wipe</button> 
+    </form>
+		<p></p>
+	</div>
+</div>
+<script>
+  function wipe(){
+  document.getElementById("newcon").reset()
+  }
+</script>
+
+
+
+
+    
+    <!-- <script src="helper.js"></script> -->
+    <script src="builder.js"></script>
+
+    
+  </body>
+</html>
